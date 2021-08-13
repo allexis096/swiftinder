@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E6E464326C6045E00E54819 /* CombineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E464226C6045E00E54819 /* CombineVC.swift */; };
 		3E958DF526C060C8001CA08B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E958DF426C060C8001CA08B /* AppDelegate.swift */; };
 		3E958DF726C060C8001CA08B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E958DF626C060C8001CA08B /* SceneDelegate.swift */; };
 		3E958DF926C060C8001CA08B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E958DF826C060C8001CA08B /* ViewController.swift */; };
 		3E958DFC26C060C8001CA08B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E958DFA26C060C8001CA08B /* Main.storyboard */; };
 		3E958DFE26C060CA001CA08B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E958DFD26C060CA001CA08B /* Assets.xcassets */; };
 		3E958E0126C060CA001CA08B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E958DFF26C060CA001CA08B /* LaunchScreen.storyboard */; };
+		3E958E0926C06A13001CA08B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E958E0826C06A13001CA08B /* UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E6E464226C6045E00E54819 /* CombineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineVC.swift; sourceTree = "<group>"; };
 		3E958DF126C060C8001CA08B /* tinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E958DF426C060C8001CA08B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E958DF626C060C8001CA08B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		3E958DFD26C060CA001CA08B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E958E0026C060CA001CA08B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E958E0226C060CA001CA08B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E958E0826C06A13001CA08B /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E6E464126C6044000E54819 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3E6E464226C6045E00E54819 /* CombineVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		3E958DE826C060C8001CA08B = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +68,7 @@
 		3E958DF326C060C8001CA08B /* tinder */ = {
 			isa = PBXGroup;
 			children = (
+				3E6E464126C6044000E54819 /* Controller */,
 				3E958DF426C060C8001CA08B /* AppDelegate.swift */,
 				3E958DF626C060C8001CA08B /* SceneDelegate.swift */,
 				3E958DF826C060C8001CA08B /* ViewController.swift */,
@@ -63,6 +76,7 @@
 				3E958DFD26C060CA001CA08B /* Assets.xcassets */,
 				3E958DFF26C060CA001CA08B /* LaunchScreen.storyboard */,
 				3E958E0226C060CA001CA08B /* Info.plist */,
+				3E958E0826C06A13001CA08B /* UIView.swift */,
 			);
 			path = tinder;
 			sourceTree = "<group>";
@@ -137,9 +151,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E958E0926C06A13001CA08B /* UIView.swift in Sources */,
 				3E958DF926C060C8001CA08B /* ViewController.swift in Sources */,
 				3E958DF526C060C8001CA08B /* AppDelegate.swift in Sources */,
 				3E958DF726C060C8001CA08B /* SceneDelegate.swift in Sources */,
+				3E6E464326C6045E00E54819 /* CombineVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
