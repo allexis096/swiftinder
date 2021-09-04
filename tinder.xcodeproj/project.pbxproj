@@ -15,6 +15,11 @@
 		3E958DFE26C060CA001CA08B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E958DFD26C060CA001CA08B /* Assets.xcassets */; };
 		3E958E0126C060CA001CA08B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E958DFF26C060CA001CA08B /* LaunchScreen.storyboard */; };
 		3E958E0926C06A13001CA08B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E958E0826C06A13001CA08B /* UIView.swift */; };
+		3EAE538326E3AC64001397C5 /* CombineCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAE538226E3AC64001397C5 /* CombineCardView.swift */; };
+		3EAE538626E3B09D001397C5 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAE538526E3B09D001397C5 /* UILabel.swift */; };
+		3EAE538926E3B3D3001397C5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAE538826E3B3D3001397C5 /* User.swift */; };
+		3EAE538C26E3B484001397C5 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAE538B26E3B484001397C5 /* UserService.swift */; };
+		3EAE538E26E3B967001397C5 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAE538D26E3B967001397C5 /* UIImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,11 @@
 		3E958E0026C060CA001CA08B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E958E0226C060CA001CA08B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E958E0826C06A13001CA08B /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		3EAE538226E3AC64001397C5 /* CombineCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineCardView.swift; sourceTree = "<group>"; };
+		3EAE538526E3B09D001397C5 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		3EAE538826E3B3D3001397C5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3EAE538B26E3B484001397C5 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		3EAE538D26E3B967001397C5 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +78,10 @@
 		3E958DF326C060C8001CA08B /* tinder */ = {
 			isa = PBXGroup;
 			children = (
+				3EAE538A26E3B478001397C5 /* Service */,
+				3EAE538726E3B3C9001397C5 /* Model */,
+				3EAE538426E3AE7E001397C5 /* Lib */,
+				3EAE538126E3AC48001397C5 /* View */,
 				3E6E464126C6044000E54819 /* Controller */,
 				3E958DF426C060C8001CA08B /* AppDelegate.swift */,
 				3E958DF626C060C8001CA08B /* SceneDelegate.swift */,
@@ -76,9 +90,42 @@
 				3E958DFD26C060CA001CA08B /* Assets.xcassets */,
 				3E958DFF26C060CA001CA08B /* LaunchScreen.storyboard */,
 				3E958E0226C060CA001CA08B /* Info.plist */,
-				3E958E0826C06A13001CA08B /* UIView.swift */,
 			);
 			path = tinder;
+			sourceTree = "<group>";
+		};
+		3EAE538126E3AC48001397C5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3EAE538226E3AC64001397C5 /* CombineCardView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3EAE538426E3AE7E001397C5 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				3E958E0826C06A13001CA08B /* UIView.swift */,
+				3EAE538526E3B09D001397C5 /* UILabel.swift */,
+				3EAE538D26E3B967001397C5 /* UIImageView.swift */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		3EAE538726E3B3C9001397C5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3EAE538826E3B3D3001397C5 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3EAE538A26E3B478001397C5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3EAE538B26E3B484001397C5 /* UserService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +200,11 @@
 			files = (
 				3E958E0926C06A13001CA08B /* UIView.swift in Sources */,
 				3E958DF926C060C8001CA08B /* ViewController.swift in Sources */,
+				3EAE538C26E3B484001397C5 /* UserService.swift in Sources */,
+				3EAE538626E3B09D001397C5 /* UILabel.swift in Sources */,
+				3EAE538326E3AC64001397C5 /* CombineCardView.swift in Sources */,
+				3EAE538926E3B3D3001397C5 /* User.swift in Sources */,
+				3EAE538E26E3B967001397C5 /* UIImageView.swift in Sources */,
 				3E958DF526C060C8001CA08B /* AppDelegate.swift in Sources */,
 				3E958DF726C060C8001CA08B /* SceneDelegate.swift in Sources */,
 				3E6E464326C6045E00E54819 /* CombineVC.swift in Sources */,
