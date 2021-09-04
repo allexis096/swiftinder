@@ -35,7 +35,7 @@ class UserService {
     
     func searchUsers (completion: @escaping ([User]?, Error?) -> ()) {
         DispatchQueue.main.asyncAfter(
-            deadline: .now() + 2.0,
+            deadline: .now() + 0.0,
             execute: {
                 completion(self.users, nil)
             }
