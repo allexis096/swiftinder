@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		3E250CBA26E4201900C7A67D /* MatchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E250CB926E4201900C7A67D /* MatchVC.swift */; };
 		3E250CBC26E4386400C7A67D /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E250CBB26E4386400C7A67D /* DetailVC.swift */; };
+		3E36FC8526E5071C005824C8 /* DetailPhotosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E36FC8426E5071C005824C8 /* DetailPhotosCell.swift */; };
+		3E36FC8726E50A84005824C8 /* SlidePhotosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E36FC8626E50A84005824C8 /* SlidePhotosVC.swift */; };
+		3E36FC8926E50DA8005824C8 /* SlidePhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E36FC8826E50DA8005824C8 /* SlidePhotoCell.swift */; };
 		3E6E464326C6045E00E54819 /* CombineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E464226C6045E00E54819 /* CombineVC.swift */; };
 		3E6FF08A26E49A8700AFB303 /* DetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6FF08926E49A8700AFB303 /* DetailHeaderView.swift */; };
 		3E6FF08C26E49D8100AFB303 /* DetailProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6FF08B26E49D8100AFB303 /* DetailProfileCell.swift */; };
@@ -31,6 +34,9 @@
 /* Begin PBXFileReference section */
 		3E250CB926E4201900C7A67D /* MatchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchVC.swift; sourceTree = "<group>"; };
 		3E250CBB26E4386400C7A67D /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		3E36FC8426E5071C005824C8 /* DetailPhotosCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotosCell.swift; sourceTree = "<group>"; };
+		3E36FC8626E50A84005824C8 /* SlidePhotosVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidePhotosVC.swift; sourceTree = "<group>"; };
+		3E36FC8826E50DA8005824C8 /* SlidePhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidePhotoCell.swift; sourceTree = "<group>"; };
 		3E6E464226C6045E00E54819 /* CombineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineVC.swift; sourceTree = "<group>"; };
 		3E6FF08926E49A8700AFB303 /* DetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeaderView.swift; sourceTree = "<group>"; };
 		3E6FF08B26E49D8100AFB303 /* DetailProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProfileCell.swift; sourceTree = "<group>"; };
@@ -69,6 +75,7 @@
 				3E6E464226C6045E00E54819 /* CombineVC.swift */,
 				3E250CB926E4201900C7A67D /* MatchVC.swift */,
 				3E250CBB26E4386400C7A67D /* DetailVC.swift */,
+				3E36FC8626E50A84005824C8 /* SlidePhotosVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -115,6 +122,8 @@
 				3EACFAF726E3EB31009AB812 /* Loading.swift */,
 				3E6FF08926E49A8700AFB303 /* DetailHeaderView.swift */,
 				3E6FF08B26E49D8100AFB303 /* DetailProfileCell.swift */,
+				3E36FC8426E5071C005824C8 /* DetailPhotosCell.swift */,
+				3E36FC8826E50DA8005824C8 /* SlidePhotoCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -216,9 +225,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E36FC8926E50DA8005824C8 /* SlidePhotoCell.swift in Sources */,
 				3E958E0926C06A13001CA08B /* UIView.swift in Sources */,
 				3E958DF926C060C8001CA08B /* ViewController.swift in Sources */,
 				3EAE538C26E3B484001397C5 /* UserService.swift in Sources */,
+				3E36FC8526E5071C005824C8 /* DetailPhotosCell.swift in Sources */,
 				3EAE538626E3B09D001397C5 /* UILabel.swift in Sources */,
 				3EAE538326E3AC64001397C5 /* CombineCardView.swift in Sources */,
 				3EAE538926E3B3D3001397C5 /* User.swift in Sources */,
@@ -232,6 +243,7 @@
 				3E6E464326C6045E00E54819 /* CombineVC.swift in Sources */,
 				3E250CBC26E4386400C7A67D /* DetailVC.swift in Sources */,
 				3E6FF08A26E49A8700AFB303 /* DetailHeaderView.swift in Sources */,
+				3E36FC8726E50A84005824C8 /* SlidePhotosVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

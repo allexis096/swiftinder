@@ -44,6 +44,7 @@ class DetailVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     let cellId = "cellId"
     let headerId = "headerId"
     let profileId = "profileId"
+    let photosId = "photosId"
     
     init() {
         super.init(collectionViewLayout: HeaderLayout())
@@ -58,7 +59,7 @@ class DetailVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
         
         collectionView.contentInsetAdjustmentBehavior = .never
         
-        collectionView.backgroundColor = .red
+        collectionView.backgroundColor = .white
         collectionView.register(
             UICollectionViewCell.self,
             forCellWithReuseIdentifier: cellId
@@ -72,13 +73,17 @@ class DetailVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
             DetailProfileCell.self,
             forCellWithReuseIdentifier: profileId
         )
+        collectionView.register(
+            DetailPhotosCell.self,
+            forCellWithReuseIdentifier: photosId
+        )
     }
     
     override func collectionView(
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int
     ) -> Int {
-        return 1
+        return 2
     }
     
     override func collectionView(
@@ -108,30 +113,38 @@ class DetailVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
         _ collectionView: UICollectionView,
         cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
-        let cell =
-            collectionView.dequeueReusableCell(
-                withReuseIdentifier: profileId,
-                for: indexPath
-            ) as! DetailProfileCell
-        cell.user = self.user
+        if indexPath.item == 0 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: profileId, for: indexPath) as! DetailProfileCell
+            cell.user = self.user
+            
+            return cell
+        }
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: photosId, for: indexPath) as! DetailPhotosCell
         
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        sizeForItemAt indexPath: IndexPath
+    ) -> CGSize {
         let width: CGFloat = UIScreen.main.bounds.width
-        var height: CGFloat = 100
+        var height: CGFloat = UIScreen.main.bounds.width * 0.66
         
-        let cell = DetailProfileCell(
-            frame: CGRect(x: 0, y: 0, width: width, height: height)
-        )
-        cell.user = self.user
-        cell.layoutIfNeeded()
-        
-        let estimatedSize = cell.systemLayoutSizeFitting(
-            CGSize(width: width, height: 1000)
-        )
-        height = estimatedSize.height
+        if indexPath.item == 0 {
+            let cell = DetailProfileCell(
+                frame: CGRect(x: 0, y: 0, width: width, height: height)
+            )
+            cell.user = self.user
+            cell.layoutIfNeeded()
+            
+            let estimatedSize = cell.systemLayoutSizeFitting(
+                CGSize(width: width, height: 1000)
+            )
+            height = estimatedSize.height
+        }
         
         return .init(width: width, height: height)
     }
