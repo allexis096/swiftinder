@@ -46,6 +46,20 @@ class DetailVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     let profileId = "profileId"
     let photosId = "photosId"
     
+    var deslikeButton: UIButton = .iconFooter(named: "icone-deslike")
+    var likeButton: UIButton = .iconFooter(named: "icone-like")
+    
+    var backButton: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(named: "icone-down"), for: .normal)
+        button.backgroundColor = UIColor(red: 232/255, green: 88/255, blue: 54/255, alpha: 1)
+        button.clipsToBounds = true
+        
+        return button
+    }()
+    
+    var callback: ((User?, Action) -> Void)?
+    
     init() {
         super.init(collectionViewLayout: HeaderLayout())
     }
@@ -58,6 +72,7 @@ class DetailVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
         super.viewDidLoad()
         
         collectionView.contentInsetAdjustmentBehavior = .never
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 134, right: 0)
         
         collectionView.backgroundColor = .white
         collectionView.register(
@@ -77,6 +92,40 @@ class DetailVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
             DetailPhotosCell.self,
             forCellWithReuseIdentifier: photosId
         )
+        
+        self.addBack()
+        self.addFooter()
+    }
+    
+    func addBack() {
+        view.addSubview(backButton)
+        backButton.frame = CGRect(
+            x: view.bounds.width + 340,
+            y: view.bounds.height + 565,
+            width: 48,
+            height: 48
+        )
+        backButton.layer.cornerRadius = 24
+        backButton.addTarget(self, action: #selector(backClick), for: .touchUpInside)
+    }
+    
+    func addFooter() {
+        let stackView = UIStackView(
+            arrangedSubviews: [UIView(), deslikeButton, likeButton, UIView()]
+        )
+        stackView.distribution = .equalCentering
+        
+        view.addSubview(stackView)
+        stackView.fill(
+            top: nil,
+            leading: view.leadingAnchor,
+            trailing: view.trailingAnchor,
+            bottom: view.bottomAnchor,
+            padding: .init(top: 0, left: 16, bottom: 34, right: 16)
+        )
+        
+        deslikeButton.addTarget(self, action: #selector(deslikeClick), for: .touchUpInside)
+        likeButton.addTarget(self, action: #selector(likeClick), for: .touchUpInside)
     }
     
     override func collectionView(
@@ -147,5 +196,29 @@ class DetailVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
         }
         
         return .init(width: width, height: height)
+    }
+    
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let originY = view.bounds.height - 282.5
+        
+        if scrollView.contentOffset.y > 0 {
+            self.backButton.frame.origin.y = originY - scrollView.contentOffset.y
+        } else {
+            self.backButton.frame.origin.y = originY + scrollView.contentOffset.y * -1
+        }
+    }
+    
+    @objc func backClick() {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func deslikeClick() {
+        self.callback?(self.user, Action.deslike)
+        self.backClick()
+    }
+    
+    @objc func likeClick() {
+        self.callback?(self.user, Action.like)
+        self.backClick()
     }
 }

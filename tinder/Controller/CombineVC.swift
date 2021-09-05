@@ -135,6 +135,16 @@ extension CombineVC {
         detailVC.user = user
         detailVC.modalPresentationStyle = .fullScreen
         
+        detailVC.callback = {(user, action) in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+                if action == .deslike {
+                    self.deslikeClick()
+                } else {
+                    self.likeClick()
+                }
+            })
+        }
+        
         self.present(detailVC, animated: true, completion: nil)
     }
 }
